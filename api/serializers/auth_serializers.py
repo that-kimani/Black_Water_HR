@@ -4,4 +4,4 @@ from rest_framework import routers , serializers , viewsets
 
 class Login_serializer(serializers.Serializer):
     username = serializers.CharField()
-    password = serializers.CharField()
+    password = serializers.CharField( write_only = True)
