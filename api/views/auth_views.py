@@ -1,6 +1,4 @@
-from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from django.views.decorators.csrf import csrf_exempt
 from rest_framework import status
 from django.contrib.auth import authenticate
 from django.conf import settings
@@ -8,7 +6,6 @@ from api.serializers.auth_serializers import Login_serializer
 import jwt
 import datetime
 
-from django.http import HttpResponse
 from rest_framework.views import APIView
 from rest_framework.permissions import AllowAny
 
@@ -47,8 +44,3 @@ class LoginView(APIView):
             
             else:
                 return Response({'error' : 'Invalid credentials'}, status=status.HTTP_400_BAD_REQUEST)
-        
-
-@csrf_exempt
-def test_view(request):
-    return (HttpResponse('Hello World'))
