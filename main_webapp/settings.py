@@ -134,7 +134,11 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+#This if clause uses a different hasher to reduce server latency during development.
+# If DEBUG is set to false, the default hasher is used.
 if DEBUG:
     PASSWORD_HASHERS = [
         'django.contrib.auth.hashers.MD5PasswordHasher',
     ]
+
+AUTH_USER_MODEL = 'api.UserAccount'
