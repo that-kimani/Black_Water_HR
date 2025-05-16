@@ -31,7 +31,7 @@ class LoginView(APIView):
             if user is not None:
                 payload = {
                     'id'       : user.id,
-                    'username' : user.username,
+                    'employee_id' : user.employee_id,
                     'staff_category' : user.staff_category,
                     'exp'      : datetime.datetime.utcnow() + datetime.timedelta(hours=24),
                     'iat'      : datetime.datetime.utcnow()

@@ -11,6 +11,7 @@ class StaffUser(models.Model):
     date_of_joining = models.DateField()
     email = models.EmailField()
     contact = models.CharField(max_length=15)
+    status = models.CharField(max_length=100 , null=True)
     # profile_photo = models.ImageField(upload_to='upload_path e.g staff_photos/',null=True ,blank=True)
 
     def __str__(self):
