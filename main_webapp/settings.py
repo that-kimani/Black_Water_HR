@@ -52,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'main_webapp.urls'
@@ -142,3 +143,5 @@ if DEBUG:
     ]
 
 AUTH_USER_MODEL = 'api.UserAccount'
+
+STATIC_ROOT = BASE_DIR / 'staticFiles'
