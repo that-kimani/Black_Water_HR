@@ -17,12 +17,19 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path , include
 
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+
+#     path('', include('api.urls')),
+#     path('', include('accounts.urls')),
+#     path('', include('hr.urls')),
+#     path('', include('staff.urls')),
+    
+# ]
+
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    path('', include('api.urls')),
-    path('', include('accounts.urls')),
-    path('', include('hr.urls')),
-    path('', include('staff.urls')),
-    
+    # API route entry point
+    path('', include('api.urls'))
 ]

@@ -1,3 +1,272 @@
-body{
-  background-color: rgb(232, 200, 36);
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background-color: #123458;
+}
+
+.frame-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:35px 0px 125px 0px;
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+.frame-3 .group {
+    margin: 0 0px 60px 0 ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    box-sizing: border-box;
+}
+
+.frame-3 .log-into-your {
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 35px; 
+    color: #26282A;
+}
+
+.frame-3 .account {
+    margin-left: 6.7px;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 30px ; 
+    color: #26282A;
+}
+
+.alert-message {
+    margin:5px ;
+    font-family: 'Inter';
+    font-size: 12px;
+    margin-left: 27px;
+    margin-bottom: 12px;
+    color: crimson;
+}
+
+.form-group input {
+    background-color: #F2F2F2;
+    width: 300px;
+    margin-bottom: 40px;
+    margin-left: 25px;
+    padding:10px 5px;
+    font-family: 'Inter';
+    border: none;
+    border-bottom:1px solid #bdbdbd;
+    border-radius: 0px;
+    outline: none;
+    transition: border-color 0.8s ease;
+}
+
+  .form-group input:focus {
+    border-bottom: 1px solid #333;
+}
+
+.frame-3 .email_container {
+    margin: 0 1px 50px 0;
+    width: 360px;
+}
+
+.frame-3 .password_container {
+    margin: 0 1px 50px 0;
+    width: 360px;
+    padding: 10px 5px;
+}
+
+.login-button {
+    background-color: #333;
+    width: 125px;
+    margin-bottom:50px;
+    margin-left: 112px;
+    font-family: 'Inter';
+    color: white;           
+    border: none;          
+    padding: 6px 20px;    
+    font-size: 16px;        
+    border-radius: 25px;    
+    cursor: pointer;        
+    outline: none;          
+    transition: background-color 0.3s; /* Smooth transition for background color */
+
+}
+
+.login-button:hover {
+    background-color: #424242; /* Slightly lighter background on hover */
+}
+
+.toggle-password {
+    opacity: 0.8;
+    position: relative;
+    right: 35px;
+    cursor: pointer;
+}
+
+.frame-3 .dont-have-an-account {
+    opacity: 0.6;
+    margin: 0 0px 10px 7px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 20px;
+    color: #111e2c;
+}
+
+.frame-3 .support {
+    margin: 0 5px 0 5px ;
+    overflow-wrap: break-word;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 22px;
+    color: #26282A;
+    text-decoration:underline;
+}
+
+.message {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.message-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.message-error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+
+
+/*#####################################################################################################################*/
+
+@media only screen and (max-width: 600px) {
+
+    .frame-3{
+        width:100%;
+        height: 100%;
+    }
+
+    .form-group{
+        position: relative;
+        width: 100%;
+    }
+
+}
+
+@media only screen and (min-width: 601px) {
+
+    .frame-3{
+        width:100%;
+        height: 100%;
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+    .frame-3{
+        width:100%;
+        height: 100%;
+        padding-top: 125px;
+    }
+
+}
+
+@media only screen and (min-width: 992px) {
+
+    .frame-3{
+        width:100%;
+        height: 100%;
+        padding-top: 125px;
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
+    html, body {
+        width: 100%;
+        height: 100%;
+        background-color: #123458;
+    }
+
+    .wrapper{
+        height: 600px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .frame-3{
+        width:390px;
+        height: 530px;
+        padding-top: 140px;
+        margin-top: 100px;
+        border-radius: 30px;
+        background-color: #d9dedf;
+    }
+
+    .frame-3 .group {
+        margin: 0 1.5px 50px 0 ;
+    }
+
+    .frame-3 .log-into-your {
+        font-size: 23px; 
+    }
+
+    .frame-3 .account {
+        font-size: 23px ; 
+    }
+
+    .form-group input {
+        background-color: #d9dedf;
+        width: 300px;
+        margin-bottom: 35px;
+        padding:10px 5px;
+        border: none;
+        border-bottom:1px solid #bdbdbd;
+        border-radius: 0px;
+        outline: none;
+        transition: border-color 0.8s ease;
+      }
+
+      .toggle-password {
+        opacity: 0.8;
+        position: relative;
+        cursor:pointer;
+    }
+
+    .frame-3 .login-button {
+        margin-top: 20px;
+        margin-left: 112px;
+    }
+
+    .frame-3 .dont-have-an-account {
+        opacity: 0.6;
+        margin: 0 0px 10px 7px;
+        font-size: 12px;
+        color: #192a3b;
+    }
+
+    .frame-3 .support {
+        margin-left: 10px ;
+        font-size: 13px;
+        color: #26282A;
+    }
+
 }
