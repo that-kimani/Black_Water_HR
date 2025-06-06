@@ -16,20 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path , include
-
-# urlpatterns = [
-#     path('admin/', admin.site.urls),
-
-#     path('', include('api.urls')),
-#     path('', include('accounts.urls')),
-#     path('', include('hr.urls')),
-#     path('', include('staff.urls')),
-    
-# ]
+from common.views import login_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 
+    # Serve login page for root visits
+    path('', include('common.urls')),
+
     # API route entry point
-    path('', include('api.urls'))
+    path('api/', include('api.urls')),
+
 ]
